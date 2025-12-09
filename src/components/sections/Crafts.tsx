@@ -5,7 +5,7 @@ import { Card } from '../ui/Card';
 import { Hammer } from 'lucide-react';
 import { Modal } from '../ui/Modal';
 
-// Функция для получения URL картинки
+// 肖褍薪泻褑懈褟 写谢褟 锌芯谢褍褔械薪懈褟 URL 泻邪褉褌懈薪泻懈
 const getItemIcon = (id: string, isBlock = false) => {
   return `https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/${isBlock ? 'block' : 'item'}/${id}.png`;
 };
@@ -17,7 +17,7 @@ export const Crafts = () => {
     <section id="crafts" className="py-20 bg-slate-950">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
-          <Hammer className="text-beluga-accent" /> Уникальные Крафты
+          <Hammer className="text-beluga-accent" /> 校薪懈泻邪谢褜薪褘械 袣褉邪褎褌褘
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -31,9 +31,9 @@ export const Crafts = () => {
                  className="w-full h-full flex flex-col items-center"
               >
                 <div className="w-16 h-16 bg-slate-900 rounded-lg mb-4 flex items-center justify-center border-2 border-slate-700 group-hover:border-beluga-accent transition-colors shadow-lg">
-                   {/* В качестве превью покажем просто сундук или вопросительный знак, так как иконки результата у нас пока нет в данных. 
-                       Можно добавить поле resultIconId в types.ts, но пока оставим эмодзи или заглушку */}
-                   <span className="text-3xl">📦</span>
+                   {/* 袙 泻邪褔械褋褌胁械 锌褉械胁褜褞 锌芯泻邪卸械屑 锌褉芯褋褌芯 褋褍薪写褍泻 懈谢懈 胁芯锌褉芯褋懈褌械谢褜薪褘泄 蟹薪邪泻, 褌邪泻 泻邪泻 懈泻芯薪泻懈 褉械蟹褍谢褜褌邪褌邪 褍 薪邪褋 锌芯泻邪 薪械褌 胁 写邪薪薪褘褏. 
+                       袦芯卸薪芯 写芯斜邪胁懈褌褜 锌芯谢械 resultIconId 胁 types.ts, 薪芯 锌芯泻邪 芯褋褌邪胁懈屑 褝屑芯写蟹懈 懈谢懈 蟹邪谐谢褍褕泻褍  */}
+                   <span className="text-3xl">馃摝</span>
                 </div>
                 <h4 className="font-bold text-white text-lg">{craft.resultName}</h4>
               </div>
@@ -58,16 +58,15 @@ export const Crafts = () => {
                    <div 
                      key={idx} 
                      className="w-12 h-12 bg-[#8b8b8b] border-2 border-r-white border-b-white border-t-[#373737] border-l-[#373737] flex items-center justify-center relative hover:bg-[#9b9b9b] transition-colors"
-                     title={ing?.name} // Всплывающая подсказка браузера
+                     title={ing?.name}
                    >
                      {ing ? (
                        <img 
                          src={getItemIcon(ing.id, ing.isBlock)} 
                          alt={ing.name} 
                          className="w-8 h-8 object-contain pixelated"
-                         style={{ imageRendering: 'pixelated' }} // Важно для четкости пикселей
+                         style={{ imageRendering: 'pixelated' }}
                          onError={(e) => {
-                           // Если картинка не загрузилась, показываем текст
                            (e.target as HTMLImageElement).style.display = 'none';
                            (e.target as HTMLImageElement).parentElement!.innerText = '?';
                          }}
@@ -81,7 +80,7 @@ export const Crafts = () => {
              </div>
              
              <div className="mt-6 p-3 bg-beluga-dark/50 rounded-lg border border-beluga-accent/20 text-sm text-slate-300 text-center max-w-xs">
-               <span className="text-beluga-accent font-bold">Где найти ресурсы:</span><br/>
+               <span className="text-beluga-accent font-bold">袚写械 薪邪泄褌懈 褉械褋褍褉褋褘:</span><br/>
                {selectedCraft.sourceInfo}
              </div>
           </div>

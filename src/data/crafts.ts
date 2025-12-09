@@ -20,9 +20,9 @@ export const crafts: CraftRecipe[] = [
     resultDescription: 'Взрывает обсидиан с 3 попытки.',
     sourceInfo: 'Порох выпадает с криперов в данжах.',
     ingredients: [
-      i('gunpowder', 'Порох'), i('tnt', 'Динамит', true), i('gunpowder', 'Порох'),
-      i('tnt', 'Динамит', true), i('blaze_rod', 'Огненный стержень'), i('tnt', 'Динамит', true),
-      i('gunpowder', 'Порох'), i('tnt', 'Динамит', true), i('gunpowder', 'Порох')
+      i('gunpowder', 'Порох'), i('tnt_side', 'Динамит', true), i('gunpowder', 'Порох'),
+      i('tnt_side', 'Динамит', true), i('blaze_rod', 'Огненный стержень'), i('tnt_side', 'Динамит', true),
+      i('gunpowder', 'Порох'), i('tnt_side', 'Динамит', true), i('gunpowder', 'Порох')
     ]
   }
 ];
