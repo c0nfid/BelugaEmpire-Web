@@ -1,4 +1,4 @@
-import { Monitor, Smartphone } from 'lucide-react';
+import { Monitor } from 'lucide-react';
 import { Card } from '../ui/Card';
 
 export const HowToJoin = () => {
@@ -21,20 +21,7 @@ export const HowToJoin = () => {
               <li>Нажми «Готово» и заходи!</li>
             </ol>
           </Card>
-
-          {/* Bedrock */}
-          <Card className="bg-slate-800/50 backdrop-blur border-beluga-gold/30">
-            <div className="flex items-center gap-4 mb-6">
-              <Smartphone size={40} className="text-beluga-gold" />
-              <h3 className="text-2xl font-bold">Bedrock (PE)</h3>
-            </div>
-            <ul className="space-y-4 text-slate-300">
-              <li>IP: <span className="text-white font-mono bg-slate-900 px-2 py-1 rounded select-all">play.belugaempire.net</span></li>
-              <li>Port: <span className="text-white font-mono bg-slate-900 px-2 py-1 rounded select-all">19132</span></li>
-              <li className="text-sm mt-4 text-slate-400">Перейди во вкладку «Серверы», прокрути вниз и нажми «Добавить сервер».</li>
-            </ul>
-          </Card>
-        </div>
+          </div>
       </div>
     </section>
   );
