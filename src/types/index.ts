@@ -52,9 +52,17 @@ export interface Pet extends BaseEntity {
   rarity: 'common' | 'rare' | 'epic' | 'legendary';
 }
 
+// Добавляем новый тип для ингредиента
+export interface CraftIngredient {
+  id: string;   // ID текстуры (напр. 'gunpowder')
+  name: string; // Название на русском (напр. 'Порох')
+  isBlock?: boolean; // (опционально) если это блок, а не предмет
+}
+
 export interface CraftRecipe extends BaseEntity {
   resultName: string;
   resultDescription: string;
-  ingredients: (string | null)[]; // 9 слотов, null если пусто
+  // Массив теперь хранит объекты CraftIngredient или null
+  ingredients: (CraftIngredient | null)[]; 
   sourceInfo: string;
 }
