@@ -7,10 +7,6 @@ import { Modal } from '../ui/Modal';
 
 // §¶§å§ß§Ü§è§Ú§ñ §Õ§Ý§ñ §á§à§Ý§å§é§Ö§ß§Ú§ñ URL §Ü§Ñ§â§ä§Ú§ß§Ü§Ú
 const getItemIcon = (id: string, isBlock = false) => {
-
-  const baseUrl = 'https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.20.1';
-  const folder = isBlock ? 'blocks' : 'items';
-  
   return `https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/${isBlock ? 'block' : 'item'}/${id}.png`;
 };
 
