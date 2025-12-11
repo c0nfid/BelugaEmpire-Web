@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 
+const API_URL = import.meta.env.VITE_API_URL;
+const BOT_NAME = import.meta.env.VITE_TG_BOT_NAME;
+
 interface UserData {
   playername: string;
   uuid: string;
@@ -15,7 +18,6 @@ interface UserData {
 export const Dashboard = () => {
   const [user, setUser] = useState<UserData | null>(null);
   const navigate = useNavigate();
-  const API_URL = 'http://192.168.0.43:8000';
 
   useEffect(() => {
     const token = localStorage.getItem('token');

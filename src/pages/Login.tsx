@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
+const API_URL = import.meta.env.VITE_API_URL;
+const BOT_NAME = import.meta.env.VITE_TG_BOT_NAME;
 
 // Компонент виджета Телеграм
 const TelegramLoginWidget = ({ onAuth }: { onAuth: (user: any) => void }) => {
@@ -14,7 +16,7 @@ const TelegramLoginWidget = ({ onAuth }: { onAuth: (user: any) => void }) => {
 
     const script = document.createElement('script');
     script.src = 'https://telegram.org/js/telegram-widget.js?22';
-    script.setAttribute('data-telegram-login', 'YOUR_BOT_NAME'); // <-- ВСТАВЬ ИМЯ БОТА (без @)
+    script.setAttribute('data-telegram-login', BOT_NAME);
     script.setAttribute('data-size', 'large');
     script.setAttribute('data-onauth', 'onTelegramAuth(user)');
     script.setAttribute('data-request-access', 'write');
@@ -30,8 +32,6 @@ export const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
-  const API_URL = 'http://192.168.0.43:8000'; // Адрес бэкенда
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
