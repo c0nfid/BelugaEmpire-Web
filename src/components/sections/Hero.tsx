@@ -44,7 +44,7 @@ export const Hero = () => {
           </div>
           <div className="hidden md:block w-px h-8 bg-slate-600"></div>
           <div className="text-slate-400 text-sm">
-            Java: 1.20 - 1.21.x <br /> Bedrock: Supported
+            Java: 1.20 - 1.21.x <br /> Bedrock: soon
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ const navLinks = [
   { name: 'Боссы', href: '#bosses' },
   { name: 'Кланы', href: '#clans' },
   { name: 'Как зайти', href: '#join' },
+  { name: 'Личный кабинет', href: '/login' },
 ];
 
 export const Navbar = () => {
