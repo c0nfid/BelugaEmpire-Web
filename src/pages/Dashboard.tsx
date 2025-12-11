@@ -5,8 +5,6 @@ import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 
 const API_URL = import.meta.env.VITE_API_URL;
-const BOT_NAME = import.meta.env.VITE_TG_BOT_NAME;
-
 interface UserData {
   playername: string;
   uuid: string;
